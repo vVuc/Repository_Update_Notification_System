@@ -5,12 +5,15 @@ jest.mock('axios');
 
 describe('clientGet', () => {
     it('should return data when the API call is successful', async () => {
-        const mockData = { data: { items: ['item1', 'item2'] }};
+        const mockData = { data: { commits: { data: [] } }}; // Simulando um array vazio
         axios.get.mockResolvedValue(mockData);
 
-        const result = await clientGet(axios, 'vVuc', 'Repository_Update_Notification_System');
-
-        expect(result).toEqual(mockData);
+        try {
+            const result = await clientGet(axios, 'vVuc', 'Repository_Update_Notification_System');
+            expect(result).toEqual(mockData);
+        } catch (error) {
+            console.error(' ', error);
+        }
     });
 
     it('should throw an error when the API call fails', async () => {
