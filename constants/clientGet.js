@@ -16,7 +16,7 @@ const clientGet = async (client, owner, repo) => {
 
 
         const test = commits.data.map(i => i.commit.message)
-
+//Oi
 
         if (registerCommitsJson.length !== commits.data.length) {
             await createFile(test);
