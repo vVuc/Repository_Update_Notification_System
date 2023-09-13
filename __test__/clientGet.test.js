@@ -5,7 +5,7 @@ jest.mock('axios');
 
 describe('clientGet', () => {
     it('should return data when the API call is successful', async () => {
-        const mockData = { data: { commits: { data: [] } }}; // Simulando um array vazio
+        const mockData = { data: { commits: { data: [] } }};
         axios.get.mockResolvedValue(mockData);
 
         try {
