@@ -14,10 +14,12 @@ const clientGet = async (client, owner, repo) => {
 
         const registerCommitsJson = registerCommits ? JSON.parse(registerCommits) : [];
 
-        const Test = commits.data.map(i => i.commit.message)
+
+        const test = commits.data.map(i => i.commit.message)
+
 
         if (registerCommitsJson.length !== commits.data.length) {
-            await createFile(Test);
+            await createFile(test);
         }
 
     } catch (error) {

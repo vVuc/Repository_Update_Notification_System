@@ -5,12 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "lint": "eslint ."
-  },
-  "husky": {
-    "hooks": {
-      "pre-push": "yarn lint"
-    }
+    "lint": "eslint .",
+    "start": "node ./index.js"
   },
   "keywords": [],
   "author": "",
