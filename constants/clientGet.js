@@ -14,9 +14,7 @@ const clientGet = async (client, owner, repo) => {
 
         const registerCommitsJson = registerCommits ? JSON.parse(registerCommits) : [];
 
-
-        const test = commits.data.map(i => i.commit.message)
-//Oi
+        const test = commits.data.(commit => commit.commit.message);
 
         if (registerCommitsJson.length !== commits.data.length) {
             await createFile(test);
