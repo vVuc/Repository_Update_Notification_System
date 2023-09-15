@@ -1,4 +1,4 @@
-const clientGet = require('../constants/clientGet');
+const clientGet = require('../src/constants/clientGet');
 const axios = require('axios');
 
 jest.mock('axios');
