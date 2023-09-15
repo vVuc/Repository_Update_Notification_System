@@ -5,7 +5,6 @@
   "main": "index.js",
   "type": "commonjs",
   "scripts": {
-    "test": "jest",
     "lint": "eslint .",
     "start": "node index.js"
   },

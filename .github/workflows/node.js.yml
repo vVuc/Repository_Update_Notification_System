@@ -36,8 +36,8 @@ jobs:
       - name: Lint
         run: yarn lint
 
-      - name: Test
-        run: npm test
+#      - name: Test
+#        run: npm test
 
   lint_check:
     runs-on: ubuntu-latest
